@@ -1,0 +1,4 @@
+streamli
+pandas
+scikit-learn
+openpyxl
