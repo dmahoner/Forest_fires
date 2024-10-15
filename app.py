@@ -49,7 +49,7 @@ def train_model(df):
     for target_column in target_columns:
         if target_column not in df.columns:
             st.error(f"Target column '{target_column}' not found in the dataset.")
-            return None, None
+            return None
 
     X = df.drop(target_columns, axis=1)  # Features (remove target variables)
     y = df[target_columns]  # Target variables
@@ -91,7 +91,7 @@ def main():
         if model:
             st.write("Model trained successfully.")
 
-            # Get input for prediction, including vegetation and region as word options
+            # Get input for prediction
             st.write("Input feature values for prediction:")
 
             input_data = []
